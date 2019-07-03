@@ -1,23 +1,36 @@
 package com.patterns.strategy.duck;
 
-import com.patterns.strategy.flying.FlyingBehaviour;
-import com.patterns.strategy.quack.QuackBehaviour;
+import com.patterns.strategy.flying.*;
+import com.patterns.strategy.quack.*;
 
 public abstract class Duck {
-    FlyingBehaviour flyingBehaviour;
+    FlyingBehaviour flyBehaviour;
     QuackBehaviour quackBehaviour;
 
-    abstract void display ();
-
-    void swim() {
+    public Duck() {
 
     }
 
-    void fly() {
-        flyingBehaviour.fly();
+    public abstract void display ();
+
+    public void swim() {
+        System.out.println("All ducks float, even decoys!")
     }
 
-    void quack() {
+    public void performFly() {
+        flyBehaviour.fly();
+    }
+
+    public void performQuack() {
         quackBehaviour.quack();
     }
+
+    public void setFlyBehaviour(FlyBehaviour fb) {
+        flyBehaviour = fb;
+    }
+
+    public void setQuackBehaviour(QuackBehaviour qb) {
+        quackBehaviour = qb;
+    }
+
 }
