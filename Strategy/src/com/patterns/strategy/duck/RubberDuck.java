@@ -11,7 +11,7 @@ public class RubberDuck extends Duck {
 
     public RubberDuck()
     {
-        quackBehavior = new Quack();
+        quackBehaviour = new Quack();
         flyBehaviour = new FlyWithWings();
     }
 

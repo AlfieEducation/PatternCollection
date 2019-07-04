@@ -11,7 +11,7 @@ public class DecoyDuck extends Duck {
 
     public DecoyDuck()
     {
-        quackBehavior = new Quack();
+        quackBehaviour = new Quack();
         flyBehaviour = new FlyWithWings();
     }
 
