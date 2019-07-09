@@ -7,5 +7,5 @@ public abstract class Beverage {
         return name;
     }
 
-    abstract int getCost();
+    abstract double getCost();
 }
